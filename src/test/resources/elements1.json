@@ -1,0 +1,21 @@
+{
+  "element": "parseResult",
+  "content": [
+    {
+      "element": "category",
+      "meta": {
+        "classes": ["api"],
+        "title": "My API"
+      },
+      "attributes": {},
+      "content": [
+        {
+          "element": "resource",
+          "meta": {},
+          "attributes": {"href": "/foo"},
+          "content": []
+        }
+      ]
+    }
+  ]
+}

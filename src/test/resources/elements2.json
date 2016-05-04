@@ -1,0 +1,29 @@
+{
+  "element": "resource",
+  "meta": {
+    "title": "Question",
+    "description": "A Question object has the following attributes."
+  },
+  "attributes": {
+    "href": "/questions/{question_id}",
+    "hrefVariables": {
+      "element": "hrefVariables",
+      "content": [
+        {
+          "element": "member",
+          "content": {
+            "key": {
+              "element": "string",
+              "content": "question_id"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "content": [
+    {
+      "element": "dataStructure"
+    }
+  ]
+}
