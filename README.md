@@ -3,9 +3,8 @@
 
 A parser for [API Elements](https://github.com/apiaryio/api-elements) written in [Groovy](http://www.groovy-lang.org/).
 
-The main aim of GAEL is to simplify the use of API Elements descriptors in your Java/Groovy projects by providing wrappers
-with utility accessors and safe query functions, using a versatile extensible structure that allows you to deal with the
-variability of the contents.
+The aim of GAEL is to simplify the use of API Elements descriptors in your Java/Groovy projects.
+Using a versatile and extensible structure, it provides wrappers with utility accessors and safe query functions that allow you to deal with the variability of the contents.
 
 ## Usage
 Get started by creating an Element by providing a parsed JSON API Elements document.
