@@ -9,6 +9,9 @@ public class Refract {
      */
     def value;
 
+    /**
+     * The parent refract node
+     */
     Refract parent
 
     /**
@@ -28,6 +31,9 @@ public class Refract {
         initDelegates()
     }
 
+    /**
+     * Initializes delegates. Override this method as needed
+     */
     protected void initDelegates(){
 
     }
@@ -135,11 +141,11 @@ public class Refract {
         return meta?."$name"
     }
 
+    /**
+     * Returns the parent Refract node
+     * @return the parent Refract node
+     */
     public Refract getParent(){
         return parent
     }
-
-  /*  public String toString(){
-        return value.toString()
-    }*/
 }

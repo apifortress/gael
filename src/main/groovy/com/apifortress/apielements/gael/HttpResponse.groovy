@@ -21,10 +21,18 @@ class HttpResponse extends Element{
         super(object)
     }
 
+    /**
+     * Returns the status code attribute
+     * @return the status code attribute
+     */
     public String getAttrStatusCode(){
         return attributes?.statusCode
     }
 
+    /**
+     * Returns a collection of message bodies
+     * @return a collection of message bodies
+     */
     public List<MessageBody> getMessageBodies(){
         return findAll(Element.messageBodiesFilter)
     }
