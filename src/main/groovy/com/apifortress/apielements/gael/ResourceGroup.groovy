@@ -5,6 +5,8 @@ package com.apifortress.apielements.gael
  */
 class ResourceGroup extends Category {
 
+    public static String TYPE = 'resourceGroup'
+
     /**
      * Copy constructor
      * @param element a Refract item

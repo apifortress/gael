@@ -5,6 +5,8 @@ package com.apifortress.apielements.gael
  */
 class Member extends Element {
 
+    public static String TYPE = 'member'
+
     /**
      * Copy constructor
      * @param element a Refract item

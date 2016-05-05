@@ -6,6 +6,8 @@ import com.apifortress.apielements.gael.delegated.TitleDelegate
  */
 class Category extends Element implements Specializable{
 
+    public static String TYPE = 'category'
+
     @Delegate
     TitleDelegate titleDelegate
     /**

@@ -5,6 +5,8 @@ package com.apifortress.apielements.gael
  */
 class Copy extends Element{
 
+    public static String TYPE = 'copy'
+
     /**
      * Copy constructor
      * @param element a Refract item

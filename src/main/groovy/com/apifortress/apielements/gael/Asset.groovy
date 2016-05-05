@@ -5,6 +5,8 @@ package com.apifortress.apielements.gael
  */
 class Asset extends Element implements Specializable {
 
+    public static String TYPE = 'asset'
+
     /**
      * Copy constructor
      * @param element a Refract item

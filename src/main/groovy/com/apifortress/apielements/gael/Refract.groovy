@@ -4,6 +4,8 @@ package com.apifortress.apielements.gael
  */
 public class Refract {
 
+    public static String TYPE = 'refract'
+
     /**
      * Parsed value. It can be anything
      */

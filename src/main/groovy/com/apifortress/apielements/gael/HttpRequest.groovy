@@ -7,6 +7,8 @@ import com.apifortress.apielements.gael.delegated.HttpAttributesDelegate;
  */
 public class HttpRequest extends Element {
 
+    public static String TYPE = 'httpRequest'
+
     @Delegate
     HttpAttributesDelegate httpDelegate
     /**

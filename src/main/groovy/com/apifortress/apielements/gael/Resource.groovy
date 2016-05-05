@@ -7,6 +7,8 @@ import com.apifortress.apielements.gael.delegated.TitleDelegate
  */
 class Resource extends Element {
 
+    public static String TYPE = 'resource'
+
     @Delegate
     HttpAttributesDelegate httpDelegate
 

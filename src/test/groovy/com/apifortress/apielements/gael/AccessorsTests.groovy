@@ -21,15 +21,15 @@ class AccessorsTests {
         element.content().each { category ->
             assert category.getMeta('title')=='Gist Fox API'
             category.content().each { layer1 ->
-                if(layer1.type=='resourceGroup'){
+                if( layer1.type==ResourceGroup.TYPE ){
                     layer1.content().each { layer2 ->
-                        assert layer2.type=='resource'||layer2.type=='copy'
-                        if(layer2.type=='resource') {
+                        assert layer2.type==Resource.TYPE || layer2.type==Copy.TYPE
+                        if(layer2.type==Resource.TYPE) {
                             assert layer2.getMeta('title') != null
                             assert layer2.getAttribute('href') != null
                             layer2.content().each { layer3 ->
-                                assert layer3.type=='transition'||layer3.type=='copy'
-                                if(layer3.type=='transition'){
+                                assert layer3.type==Transition.TYPE || layer3.type==Copy.TYPE
+                                if(layer3.type==Transition.TYPE){
                                     assert layer3.getMeta('title') != null
                                 }
                             }
@@ -45,7 +45,7 @@ class AccessorsTests {
         def results = element.content()[0].findAll(Element.resourceGroupsFilter)
         assert results.size() > 0
         results.each {
-            assert it.type=='resourceGroup'&&it.getClass().getSimpleName()=='ResourceGroup'
+            assert it.type==ResourceGroup.TYPE &&it.getClass().getSimpleName()=='ResourceGroup'
         }
     }
 
@@ -54,7 +54,7 @@ class AccessorsTests {
         def results = element.deepFindAll(Element.httpRequestsFilter)
         assert results.size() > 0
         results.each {
-            assert it.type=='httpRequest'
+            assert it.type==HttpRequest.TYPE
             assert it.attrMethod in ['GET','POST','PUT','DELETE','PATCH']
         }
     }

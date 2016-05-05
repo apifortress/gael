@@ -5,6 +5,8 @@ package com.apifortress.apielements.gael;
  */
 public class MessageBody extends Asset {
 
+    public static String TYPE = 'messageBody'
+
     /**
      * Copy constructor
      * @param element a Refract item

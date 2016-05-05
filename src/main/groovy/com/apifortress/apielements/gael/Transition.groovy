@@ -8,6 +8,8 @@ import com.apifortress.apielements.gael.delegated.TitleDelegate
  */
 class Transition extends Element {
 
+    public static String TYPE = 'transition'
+
     @Delegate
     HttpAttributesDelegate httpDelegate
 

@@ -5,6 +5,8 @@ package com.apifortress.apielements.gael
  */
 class HttpResponse extends Element{
 
+    public static String TYPE = 'httpResponse'
+
     /**
      * Copy constructor
      * @param element a Refract item

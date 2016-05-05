@@ -5,6 +5,8 @@ package com.apifortress.apielements.gael;
  */
 public class HrefVariables extends Element{
 
+    public static String TYPE = 'hrefVariables'
+
     /**
      * Copy constructor
      * @param element a Refract item

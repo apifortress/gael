@@ -7,6 +7,8 @@ import com.apifortress.apielements.gael.delegated.HttpAttributesDelegate
  */
 class HttpTransaction extends Element {
 
+    public static String TYPE = 'httpTransaction'
+
     @Delegate
     HttpAttributesDelegate httpDelegate
 
