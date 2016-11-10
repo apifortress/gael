@@ -39,6 +39,7 @@ class ActionsCollector extends LinkedList implements ICollector {
         switch(current.type){
             case 'transition':
                 action = action.clone()
+                action.href = current.attrHref
                 action.addTitle(current.title)
                 action.method=current.attrMethod
                 current.content().each {
@@ -70,6 +71,7 @@ class ActionsCollector extends LinkedList implements ICollector {
         action.method=current.attrMethod
         action.request = current
         action.requestMessageBody = current.findAll(Element.messageBodiesFilter)[0]
+        action.requestHttpHeaders = current.attrHttpHeaders
         action.hrefVariablesCollector = new HrefVariablesCollector(current)
         action.hrefVariablesCollector.scan()
 

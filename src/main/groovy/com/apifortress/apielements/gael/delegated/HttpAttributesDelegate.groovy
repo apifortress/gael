@@ -1,7 +1,8 @@
 package com.apifortress.apielements.gael.delegated
 
 import com.apifortress.apielements.gael.ArtifactFactory
-import com.apifortress.apielements.gael.Element;
+import com.apifortress.apielements.gael.Element
+import com.apifortress.apielements.gael.HttpHeaders;
 
 /**
  * A httpDelegate class that can be delegated to enrich an object with methods that may contain HTTP related content
@@ -25,6 +26,11 @@ class HttpAttributesDelegate extends Capable implements HttpAttributesCapable {
     @Override
     public String getAttrHref(){
         return parentElement.getAttribute('href')
+    }
+
+    public HttpHeaders getAttrHttpHeaders(){
+        def vars = parentElement.getAttribute('httpHeaders')
+        return ArtifactFactory.newArtifact(vars,parentElement)
     }
 
 }

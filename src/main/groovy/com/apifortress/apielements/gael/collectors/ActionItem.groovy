@@ -1,5 +1,6 @@
 package com.apifortress.apielements.gael.collectors
 
+import com.apifortress.apielements.gael.HttpHeaders
 import com.apifortress.apielements.gael.HttpRequest
 import com.apifortress.apielements.gael.HttpResponse
 import com.apifortress.apielements.gael.MessageBody
@@ -29,6 +30,8 @@ class ActionItem {
      * A shortcut to the request message body
      */
     MessageBody requestMessageBody
+
+    HttpHeaders requestHttpHeaders
 
     /**
      * merging in one collector all the href variables we encounter
