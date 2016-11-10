@@ -37,4 +37,15 @@ class Category extends Element implements Specializable{
             return new ResourceGroup(this)
         return this
     }
+
+    public String getAttrHost(){
+        def meta = getAttribute('meta')
+        def iterator = meta.iterator()
+        while(iterator.hasNext()){
+            Member item = ArtifactFactory.newArtifact(iterator.next(),null)
+            if(item?.key=='HOST')
+                return item.value
+        }
+        return null
+    }
 }
