@@ -56,4 +56,8 @@ class ArtifactFactory {
     public static boolean isPrimitiveType(def item){
         return item instanceof String || item instanceof Number
     }
+
+    public static boolean isIgnoredType(def item){
+        return item instanceof Map && item.element == 'dataStructure'
+    }
 }
