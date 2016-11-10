@@ -81,11 +81,19 @@ public class Element extends Refract{
     static def categoriesFilter = {
         return it.element == 'category'
     }
+
+    static def httpHeadersFilter = {
+        return it.element == 'httpHeaders'
+    }
     /**
      * Criteria for resource groups
      */
     static def resourceGroupsFilter = {
         return it.element == 'category' && it.meta.classes.contains('resourceGroup')
+    }
+
+    static def membersFilter = {
+        return it.element == 'member'
     }
 
     /**
