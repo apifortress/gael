@@ -100,12 +100,16 @@ public class Refract {
      */
     protected static void deepFindAll(Refract element, Closure conditions,def items){
         def content = element.content()
-        if(!ArtifactFactory.isPrimitiveType(content))
-            content.each {
-                if(conditions(it))
-                    items.add(it)
-                Refract.deepFindAll(it,conditions,items)
-            }
+        if(!ArtifactFactory.isPrimitiveType(content) && !ArtifactFactory.isIgnoredType(content))
+            try {
+                content.each {
+                    if (it instanceof Refract) {
+                        if (conditions(it))
+                            items.add(it)
+                        Refract.deepFindAll(it, conditions, items)
+                    }
+                }
+            }catch(Exception e){}
     }
 
     /**
