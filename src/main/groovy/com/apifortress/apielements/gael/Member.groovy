@@ -27,24 +27,24 @@ class Member extends Element {
      * @return the key type
      */
     public String getKeyType(){
-        return content.key.element
+        return content?.key?.element
     }
     /**
      * @return the key name
      */
     public String getKey(){
-        return content.key.content
+        return content?.key?.content
     }
     /**
      * @return the value type
      */
     public String getValueType(){
-        return content.value.element
+        return content?.value?.element
     }
     /**
      * @return the value (if available)
      */
     public def getValue(){
-        return content.value.content
+        return content?.value?.content
     }
 }
