@@ -41,7 +41,14 @@ class ActionItem {
     /**
      * A collection of responses, in case there's more than one
      */
-    def responses = []
+    Set<HttpResponse> responses = new TreeSet<HttpResponse>(new Comparator<HttpResponse>() {
+        @Override
+        int compare(HttpResponse o1, HttpResponse o2) {
+            if(o1.attrStatusCode == null || o2.attrStatusCode)
+                return -1
+            return Integer.valueOf(o1.attrStatusCode)-Integer.valueOf(o2.attrStatusCode)
+        }
+    })
 
     /**
      * Adding a title to the titles collection

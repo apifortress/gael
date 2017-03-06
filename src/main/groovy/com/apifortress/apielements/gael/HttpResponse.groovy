@@ -38,4 +38,8 @@ class HttpResponse extends Element{
     public List<MessageBody> getMessageBodies(){
         return findAll(Element.messageBodiesFilter)
     }
+
+    public List<MessageBodySchema> getMessageBodySchemas(){
+        return findAll(Element.messageBodySchemasFilter)
+    }
 }

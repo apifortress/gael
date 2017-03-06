@@ -25,6 +25,8 @@ class Asset extends Element implements Specializable {
 
     @Override
     Specializable specializedInstance() {
+        if(meta?.classes?.contains('messageBodySchema'))
+            return new MessageBodySchema(this)
         if(meta?.classes?.contains('messageBody'))
             return new MessageBody(this)
         return this
