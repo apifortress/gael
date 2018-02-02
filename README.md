@@ -13,6 +13,7 @@ As we do in our examples:
 	def data = new JsonSlurper().parse((InputStream)getClass().getResourceAsStream('/elements1.json'))
     Element element = new Element(data)
 
+### Querying
 Now you can deep dive into the document by using our methods such as:
 
 	// access the element content
@@ -34,6 +35,13 @@ Now you can deep dive into the document by using our methods such as:
 	}
 
 All the query methods may return Elements or specialized classes inheriting from Element.
+
+### Collectors
+Collectors are utilities that can simplify some common tasks when consuming API Elements.
+Collectors in fact collect interesting items that are spread in the elements tree.
+
+The HrefCollector, searches a provided element and its descendants for 'href' attributes', collecting them
+as it finds them.
 
 ## TODO
 * Write complete reference on the exposed API.
