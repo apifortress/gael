@@ -95,4 +95,11 @@ class ActionItem {
         cloned.href = this.href
         return cloned
     }
+
+    public String getRequestContentType(){
+        if(requestMessageBody)
+            return requestMessageBody.contentType
+        else
+            return request.attrHttpHeaders.getHeaderValue("Content-Type")
+    }
 }
