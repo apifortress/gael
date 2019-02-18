@@ -54,4 +54,12 @@ public class HttpRequest extends Element {
     public List<MessageBody> getMessageBodies(){
         return findAll(Element.messageBodiesFilter)
     }
+
+    /**
+     * Shortcut to obtain a content type header from the request
+     * @return a content type header value or null if not found
+     */
+    public String getContentTypeHeader(){
+        return getAttrHttpHeaders()?.getHeaderValue("Content-Type")
+    }
 }

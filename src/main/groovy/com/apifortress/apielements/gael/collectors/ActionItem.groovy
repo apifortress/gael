@@ -96,10 +96,18 @@ class ActionItem {
         return cloned
     }
 
+    /**
+     * Determines the request content type. If a message body is present, the information is derived from there,
+     * otherwise a "Content-Type" header is obtained by the request headers.
+     * This method may return null if no information is available
+     * @return the detected content-type
+     */
     public String getRequestContentType(){
+        String ct = null
         if(requestMessageBody)
-            return requestMessageBody.contentType
-        else
-            return request.attrHttpHeaders.getHeaderValue("Content-Type")
+            ct = requestMessageBody.contentType
+        if(ct == null)
+            ct = request.getContentTypeHeader()
+        return ct
     }
 }
