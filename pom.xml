@@ -4,7 +4,7 @@
 
     <groupId>com.apifortress.apielements</groupId>
     <artifactId>gael</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
 
     <packaging>jar</packaging>
     <name>Gael</name>
@@ -221,9 +221,4 @@
             </build>
         </profile>
     </profiles>
-
-    <properties>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
-    </properties>
-
 </project>
